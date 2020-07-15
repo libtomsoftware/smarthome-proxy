@@ -1,0 +1,28 @@
+{
+  "name": "smarthome-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/libtomsoftware/smarthome-proxy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/libtomsoftware/smarthome-proxy/issues"
+  },
+  "homepage": "https://github.com/libtomsoftware/smarthome-proxy#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "dot-env": "0.0.1",
+    "express": "^4.17.1",
+    "fs-extra": "^9.0.1",
+    "moment": "^2.27.0"
+  }
+}
