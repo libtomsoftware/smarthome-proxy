@@ -3,8 +3,9 @@ const CONFIG = require('../../config');
 const responder = require('../../responder');
 
 module.exports = async (req, res) => {
-  const { body, headers } = req;
+  const { query, headers } = req;
   const { origin } = headers;
+  const { pin } = query;
 
   try {
     const response = await axios.post(

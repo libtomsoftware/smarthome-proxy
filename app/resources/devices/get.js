@@ -20,9 +20,7 @@ module.exports = async (req, res) => {
       }
     }
 
-    const response = await axios.get(
-      `${SMARTHOME_CENTRAL_URL}/devices?id=${id}&type=${type}&name=${name}`
-    );
+    const response = await axios.get(`${SMARTHOME_CENTRAL_URL}/devices`);
     const { status, data } = response;
 
     lastResponseTime = moment();
