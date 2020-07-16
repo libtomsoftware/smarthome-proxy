@@ -1,7 +1,7 @@
 module.exports = {
   CONSTANTS: {
     ADDRESS: process.env.ADDRESS,
-    PROXY_REQUEST_DELAY: 10, //seconds
+    PROXY_REQUEST_DELAY: process.env.PROXY_REQUEST_DELAY || 10, //seconds
     SMARTHOME_CENTRAL_URL: process.env.SMARTHOME_CENTRAL_URL,
     HTTP_CODE: {
       OK: 200,

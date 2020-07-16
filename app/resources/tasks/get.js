@@ -1,7 +1,11 @@
 const axios = require('axios');
 const moment = require('moment');
 const CONFIG = require('../../config');
-const { SMARTHOME_CENTRAL_URL } = CONFIG.CONSTANTS;
+const {
+  HTTP_CODE,
+  PROXY_REQUEST_DELAY,
+  SMARTHOME_CENTRAL_URL,
+} = CONFIG.CONSTANTS;
 const responder = require('../../responder');
 
 let lastResponseTime;
