@@ -8,8 +8,6 @@ module.exports = async (req, res) => {
   const { origin } = headers;
   const { pin } = query;
 
-  console.warn('Passing through request to add task', body);
-
   try {
     const response = await axios.put(
       `${SMARTHOME_CENTRAL_URL}/tasks?pin=${pin}`,

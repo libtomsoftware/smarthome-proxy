@@ -8,16 +8,12 @@ module.exports = async (req, res) => {
   const { origin } = headers;
   const { pin } = query;
 
-  console.warn('Passing through request to update task', body);
-
   try {
     const response = await axios.post(
       `${SMARTHOME_CENTRAL_URL}/tasks?pin=${pin}`,
       body
     );
     const { status, data } = response;
-
-    console.warn(`Task ${body.id} added, responding with`, data);
 
     responder.send(res, origin, data, status);
   } catch (error) {
