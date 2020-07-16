@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
     );
     const { status, data } = response;
 
-    console.warn(`Task ${body.id} added, responding with ${data}`);
+    console.warn(`Task ${body.id} added, responding with`, data);
 
     responder.send(res, origin, data, status);
   } catch (error) {
