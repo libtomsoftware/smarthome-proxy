@@ -7,6 +7,8 @@ module.exports = async (req, res) => {
   const { body, headers } = req;
   const { origin } = headers;
 
+  console.warn('Passing through new reports', body);
+
   try {
     const response = await axios.post(`${SMARTHOME_CENTRAL_URL}/reports`, body);
     const { status, data } = response;

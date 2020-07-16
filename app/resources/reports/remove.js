@@ -9,6 +9,8 @@ module.exports = async (req, res) => {
   const { id } = params;
   const { pin } = query;
 
+  console.warn('Passing through request to remove report', id);
+
   try {
     const response = await axios.delete(
       `${SMARTHOME_CENTRAL_URL}/reports/${id}?pin=${pin}`
