@@ -4,7 +4,7 @@ const { HTTP_CODE, SMARTHOME_CENTRAL_URL } = CONFIG.CONSTANTS;
 const responder = require('../../responder');
 
 module.exports = async (req, res) => {
-  const { query, headers } = req;
+  const { query, headers, body } = req;
   const { origin } = headers;
   const { pin } = query;
 
